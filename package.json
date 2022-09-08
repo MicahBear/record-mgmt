@@ -16,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/MicahBear/record-mgmt/issues"
   },
-  "homepage": "https://github.com/MicahBear/record-mgmt#readme"
+  "homepage": "https://github.com/MicahBear/record-mgmt#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "mongodb": "^4.9.1",
+    "mongoose": "^6.5.5",
+    "morgan": "^1.10.0"
+  }
 }
