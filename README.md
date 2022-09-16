@@ -1,6 +1,6 @@
 # record-mgmt
 
-A record management app by [Micah](https://twitter.com/mbelm)
+A record management app by [Micah](https://twitter.com/MicahBElm)
 
 ## What are we building?
 
