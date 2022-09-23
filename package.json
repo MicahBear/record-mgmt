@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/MicahBear/record-mgmt#readme",
   "dependencies": {
+    "autoprefixer": "^10.4.12",
     "bcrypt": "^5.0.1",
     "connect-mongo": "^4.6.0",
     "cors": "^2.8.5",

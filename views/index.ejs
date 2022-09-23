@@ -8,8 +8,21 @@
   </head>
   <body> -->
 <%- include('partials/header') -%>
+<nav class="relative container mx-auto p-6">
+  <div class="flex items-center justify-between">
+    <div class="pt-2">
+      <img src="" alt="Your Silo" />
+    </div>
+    <!-- Menu Items -->
+    <div class="hidden md:flex space-x-3 justify-between">
+      <a class="nav-link" href="/">Home</a>
+      <a class="nav-link" href="/about">About</a>
+      <a class="nav-link" href="/community">Community</a>
+    </div>
+  </div>
+</nav>
 <div>
-  <h1 class="text-3xl">FOR FUN .. WORK FUN</h1>
+  <h1 class="text-3xl font-bold underline">FOR FUN .. WORK FUN</h1>
   <% console.log('ANother test') %>
 </div>
 
