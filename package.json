@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tailwindcss -i ./public/css/style.css -o ./public/css/main.css",
+    "watch": "tailwindcss -i ./public/css/style.css -o ./public/css/main.css --watch"
   },
   "repository": {
     "type": "git",
