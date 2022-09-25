@@ -1,5 +1,5 @@
 module.exports = {
-    getIndex: async (req, res) => {
+    getIndex: (req, res) => {
         try {
             console.log('landing page rendered.')
             res.render('index.ejs')

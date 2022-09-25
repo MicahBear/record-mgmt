@@ -6,6 +6,7 @@ const connectDB = require('./config/database');
 // render @index.ejs
 const mainRoute = require('./routes/main');
 // render-post-get authState and pages @contllers>authState
+const authRoutes = require('./routes/authRoutes');
 
 
 connectDB()
@@ -17,6 +18,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
 app.use('/', mainRoute)
+app.use('/state', authRoutes)
 
 
 app.listen(process.env.PORT, () => {
