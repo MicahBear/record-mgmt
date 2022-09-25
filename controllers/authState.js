@@ -1,20 +1,20 @@
-const passport = require("passport");
-const validator = require("validator");
-const User = require("../models/User");
+// const passport = require("passport");
+// const validator = require("validator");
+// const User = require("../models/User");
 
 exports.getLogin = (request, response) => {
     try {
-        console.log('landing page rendered.')
+        console.log('login page rendered.')
         response.render('login.ejs')
     } catch (error) {
         console.error(error)
     }
 };
 
-exports.postLogin = () => { };
+// exports.postLogin = () => { };
 
-exports.getLogout = () => { };
+// exports.getLogout = () => { };
 
-exports.getSignup = () => { };
+// exports.getSignup = () => { };
 
-exports.postSignup = () => { };
+// exports.postSignup = () => { };
