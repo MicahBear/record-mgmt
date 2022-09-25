@@ -3,8 +3,9 @@ require('dotenv').config({ path: './config/.env' });
 // const cors = require('cors')
 const app = express();
 const connectDB = require('./config/database');
-// const mainRoutes = require('./routes/main')
+// render @index.ejs
 const mainRoute = require('./routes/main');
+// render-post-get authState and pages @contllers>authState
 
 
 connectDB()
