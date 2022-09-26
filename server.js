@@ -7,6 +7,7 @@ const passport = require('passport');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 const methodOverride = require('method-override');
+const flash = require("express-flash");
 const morgan = require('morgan')
 const connectDB = require('./config/database');
 // render @index.ejs
@@ -24,6 +25,8 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(morgan('dev'));
+//Use forms for put / delete
+app.use(methodOverride("_method"));
 
 app.use(
     session({
@@ -36,6 +39,9 @@ app.use(
 //passport middleware
 app.use(passport.initialize());
 app.use(passport.session());
+
+//Use flash messages for  info
+app.use(flash());
 
 
 
