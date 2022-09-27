@@ -13,7 +13,7 @@
     "url": "git+https://github.com/MicahBear/record-mgmt.git"
   },
   "author": "micah elm",
-  "license": "MIT",
+  "license": "Apache",
   "bugs": {
     "url": "https://github.com/MicahBear/record-mgmt/issues"
   },

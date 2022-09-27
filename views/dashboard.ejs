@@ -2,10 +2,24 @@
 <div class="container">
   <div class="row mt-5">
     <div class="col-6">
-      <div>
-        <p>Testing for rendering purposes</p>
-      </div>
+    <h1>Todos</h1>
+    <ul>
+    <% todos.forEach( el => { %>
+            <li class='todoItem' data-id='<%=el._id%>'>
+                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+                <span class='del'> Delete </span>
+            </li>
+    <% }) %>    
+    </ul>
+
+    <h2><%= user.userName %> has <%= left %> things left to do.</h2>
+
+    <form action="/createTodo" method='POST'>
+        <input type="text" placeholder="Enter Todo Item" name='todoItem'>
+        <input type="submit">
+    </form>
     </div>
   </div>
 </div>
+ <a href="/logout">Logout</a>
 <%- include('partials/footer') -%>
