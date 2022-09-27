@@ -11,7 +11,7 @@ exports.getLogin = (req, res) => {
     }
 };
 
-exports.postLogin = (req, res, nex) => {
+exports.postLogin = (req, res, next) => {
     const validationErrors = [];
     if (!validator.isEmail(req.body.email))
         validationErrors.push({ msg: "Please enter a valid email address." });
@@ -20,7 +20,7 @@ exports.postLogin = (req, res, nex) => {
 
     if (validationErrors.length) {
         req.flash("errors", validationErrors);
-        return res.redirect("/login");
+        return res.redirect("/state/login");
     }
     req.body.email = validator.normalizeEmail(req.body.email, {
         gmail_remove_dots: false,
@@ -32,14 +32,14 @@ exports.postLogin = (req, res, nex) => {
         }
         if (!user) {
             req.flash("errors", info);
-            return res.redirect("/login");
+            return res.redirect("/state/login");
         }
         req.logIn(user, (err) => {
             if (err) {
                 return next(err);
             }
             req.flash("success", { msg: "Success! You are logged in." });
-            res.redirect(req.session.returnTo || "/dashboard");
+            res.redirect(req.session.returnTo || "../dashboard");
         });
     })(req, res, next);
 };
