@@ -10,9 +10,9 @@ router.post('/login', authStateController.postLogin);
 //reach server to terminate login @controllers>authState
 // router.get('/logout', authStateController.getLogout);
 // render signup page @controllers>authState
-// router.get('/signup', authStateController.getSignup);
+router.get('/signup', authStateController.getSignup);
 // reach database to initialize a new user
-// router.post('signup', authStateController.postSignup);
+router.post('/signup', authStateController.postSignup);
 
 
 module.exports = router;
