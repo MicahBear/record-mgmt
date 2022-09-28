@@ -1,5 +1,6 @@
 <%- include('partials/header') -%>
-<div class="container">
+<main>
+<section class="container-todos">
   <div class="row mt-5">
     <div class="col-6">
     <h1>Todos</h1>
@@ -20,6 +21,112 @@
     </form>
     </div>
   </div>
-</div>
+</section>
+  <section class="container-weather">
+      <div class="shadow-sm p-3 mb-5 bg-body rounded main-border">
+        <form class="search">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="input-group mb-3">
+                <!-- added in lg after form control to shorten input field -->
+
+                <input
+                  type="text"
+                  class="form-control"
+                  id="search-input"
+                  placeholder="Enter City"
+                  aria-describedby="button-addon2"
+                />
+                <button
+                  class="btn btn-outline-secondary"
+                  type="submit"
+                  value="search"
+                  id="button-addon2"
+                >
+                  Search
+                </button>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h4 id="displayCity"></h4>
+              <p id="timedisplay"></p>
+              <p class="weather-description"></p>
+            </div>
+          </div>
+        </form>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="display-temperature">
+              <div class="d-flex">
+                <img
+                  src="/src/imgs/5729378_sun_sunny_weather_climate_forecast_icon.png"
+                  alt="Clear"
+                  id="icon"
+                  class="float-left"
+                />
+                <div class="float-left">
+                  <span class="main-temp"></span
+                  ><span class="forc"
+                    ><a href="" class="fahrenheit">°F</a>|<a
+                      href=""
+                      class="celsius"
+                      >°C</a
+                    ></span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <ul>
+              <li>Wind:<span class="wind"></span>mph</li>
+              <li>Humidity: <span class="humidity"></span>%</li>
+            </ul>
+          </div>
+        </div>
+        <div class="container weather" id="weather-cast">
+          <div class="row">
+            <div class="col-md-2 g-2 main-mon">
+              <p id="monday">Monday</p>
+              <img src="" alt="" />
+              <span class="mon-max">22°</span>
+              <span class="mon-min">12°</span>
+            </div>
+            <div class="col-md-2 g-2">
+              <p>Tuesday</p>
+              <img src="" alt="" />
+              <span class="tues-max">22°</span>
+              <span class="tues-min">12°</span>
+            </div>
+            <div class="col-md-2 g-2">
+              <p>Wednesday</p>
+              <img src="" alt="" />
+              <span class="wed-max">22°</span>
+              <span class="wed-min">12°</span>
+            </div>
+            <div class="col-md-2 g-2">
+              <p>Thursday</p>
+              <img src="" alt="" />
+              <span class="thur-max">22°</span>
+              <span class="thur-min">12°</span>
+            </div>
+            <div class="col-md-2 g-2">
+              <p>Friday</p>
+              <img src="" alt="" />
+              <span class="fri-max">22°</span>
+              <span class="fri-min">12°</span>
+            </div>
+            <div class="col-md-2 g-2">
+              <p>Saturday</p>
+              <img src="" alt="" />
+              <span class="sat-max">22°</span>
+              <span class="sat-min">12°</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    </main>
  <a href="/logout">Logout</a>
 <%- include('partials/footer') -%>
