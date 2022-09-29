@@ -5,6 +5,23 @@ const UserSchema = new mongoose.Schema({
     userName: { type: String, unique: true },
     email: { type: String, unique: true },
     password: String,
+    address: {
+        type: String,
+        required: [true, 'Please add an address']
+    },
+    location: {
+        type: {
+            type: String,
+            enum: ['Point']
+        },
+        coordinates: {
+            type: [Number],
+            index: '2dsphere'
+        },
+        formatedAddress: String
+    }
+
+
 });
 
 // Password hash middleware.
