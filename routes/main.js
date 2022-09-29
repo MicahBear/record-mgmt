@@ -3,7 +3,7 @@ const router = express.Router();
 const homeController = require("../controllers/home");
 const dashController = require("../controllers/dashboard");
 const todosController = require('../controllers/todos')
-const weatherController = require('../controllers/todos')
+const weatherController = require('../controllers/weather')
 const { ensureAuth } = require("../middleware/auth");
 
 // render landing page @controllers>home
