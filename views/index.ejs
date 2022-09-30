@@ -1,43 +1,59 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>testing</title>
-  </head>
-  <body> -->
 <%- include('partials/header') -%>
-<nav class="relative container mx-auto p-6">
-  <div class="flex items-center justify-between">
-    <div class="pt-2">
-      <img src="" alt="rotation logo" />
-    </div>
-    <!-- Menu Items -->
-    <div class="hidden md:flex space-x-6 justify-between">
-      <a class="hover:text-blue-200 nav-link" href="/">Home</a>
-      <a class="hover:text-blue-200 nav-link" href="/about">About</a>
-      <a class="hover:text-blue-200 nav-link" href="/community">Community</a>
-    </div>
-  </div>
-</nav>
-<main class="container mx-auto">
-  <div class="flex justify-center">
-    <div class="block p-6 rounded-lg shadow-lg bg-white max-w-sm">
-      <a
-        href="/state/signup"
-        class="p-3 px-6 pt-2 rounded-full baseline hover:text-slate-200 signup-btn"
-      >
-        Signup</a
-      >
-      <a
-        href="/state/login"
-        class="p-3 px-6 pt-2 rounded-full baseline hover:text-gray-600 login-btn"
-      >
-        Login</a
-      >
+
+<main class="mx-auto">
+  <div
+    class="relative overflow-hidden bg-no-repeat bg-cover"
+    style="
+      background-position: 50%;
+      background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/146.webp');
+      height: 350px;
+    "
+  >
+    <div
+      class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
+      style="background-color: rgba(0, 0, 0, 0.75)"
+    >
+      <div class="flex justify-center items-center h-full">
+        <div class="text-center text-white px-6 md:px-12">
+          <h1 class="text-5xl font-bold mt-0 mb-6">Heading</h1>
+          <h3 class="text-3xl font-bold mb-8">Subeading</h3>
+
+          <div class="flex justify-center">
+            <div class="block p-6 rounded-lg shadow-lg bg-white max-w-sm">
+              <a
+                href="/state/signup"
+                class="p-3 px-6 pt-2 rounded-full baseline hover:text-slate-200 signup-btn"
+              >
+                Signup</a
+              >
+              <a
+                href="/state/login"
+                class="p-3 px-6 pt-2 rounded-full baseline hover:text-gray-600 login-btn"
+              >
+                Login</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </main>
+<section class="container mx-auto">
+  <div class="flex justify-center">
+    <section class="">
+      <img src="" alt="" />
+      <h5>Weather Tracking</h5>
+    </section>
+    <section>
+      <img src="" alt="" />
+      <h5>Task Records</h5>
+    </section>
+    <section>
+      <img src="" alt="" />
+      <h5>Plant Records</h5>
+    </section>
+  </div>
+</section>
 
 <%- include('partials/footer') %>
