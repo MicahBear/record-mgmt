@@ -1,7 +1,7 @@
 <%- include('partials/header') -%>
 
-<main class="container">
-  <div class="row justify-content-center">
+<main class="container mx-auto">
+  <div class="justify-content-center">
     <section class="col-6 mt-5">
       <% if (locals.messages.errors) { %> <%console.log(locals.messages.errors)
       messages.errors.forEach( el => { %>
@@ -10,35 +10,51 @@
       messages.info.forEach( el => { %>
       <div class="alert alert-info"><%= el.msg %></div>
       <% }) %> <% } %>
-      <form action="/state/login" method="POST">
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label"
-            >Email address
-          </label>
-          <input
-            type="email"
-            class="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-            name="email"
-          />
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input
-            type="password"
-            class="form-control"
-            id="exampleInputPassword1"
-            name="password"
-          />
-        </div>
-        <button
-          type="submit"
-          class="p-3 px-6 pt-2 rounded-full baseline hover:text-blue-200 nav-link"
+      <div
+        class="h-screen bg-white relative flex flex-col space-y-10 justify-center items-center"
+      >
+        <h1>Sign In</h1>
+        <form
+          class="bg-white md:shadow-lg shadow-none rounded p-6 w-96"
+          action="/state/login"
+          method="POST"
         >
-          Submit
-        </button>
-      </form>
+          <div class="mb-3">
+            <label
+              for="exampleInputEmail1"
+              class="leading-7 text-sm text-gray-600"
+              >Email address
+            </label>
+            <input
+              type="email"
+              class="w-full bg-white rounded border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              name="email"
+            />
+          </div>
+          <div class="mb-3">
+            <label
+              for="exampleInputPassword1"
+              class="leading-7 text-sm text-gray-600"
+              >Password</label
+            >
+
+            <input
+              type="password"
+              class="w-full bg-white rounded border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+              id="exampleInputPassword1"
+              name="password"
+            />
+          </div>
+          <button
+            type="submit"
+            class="text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
     </section>
   </div>
 </main>
