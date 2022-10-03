@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 main {
-  border: solid 2px black;
+  border: solid 2px #dcfce7;
+  border-radius: 5px;
 }
 .signup-btn {
   background: #dcfce7;
