@@ -18,21 +18,28 @@
         </div>
       </div>
     </div>
-      <div class="p-4  md:w-full">
-        <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col">
-         <div class="flex-grow">
-           <h2 class="text-gray-900 text-lg title-font font-medium mb-3"><%= user.userName %> has <%= left %> things left to do.</h2>
-             <form action="/createTodo" method='POST'>
-               <input type="text" placeholder="Enter Todo Item" name='todoItem'>
-               <input type="submit">
-               </form> 
-          </div>
+    <div class="p-4  md:w-full">
+      <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col">
+        <div class="flex-grow">
+          <h2 class="text-gray-900 text-lg title-font font-medium mb-3"><%= user.userName %> has <%= left %> things left to do.</h2>
+          <form action="/createTodo" method='POST'>
+            <input type="text" placeholder="Enter Todo Item" name='todoItem'>
+            <input type="submit">
+          </form> 
         </div>
       </div>
     </div>
-   <section class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col container-weather">
-      <div class="lg:w-1/2 sm:w-1/3 w-full rounded-lg overflow-hidden mt-6 sm:mt-0">
-        <form action="/weather" method="POST" class="search">
+  </div>
+  <section class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col container-weather">
+    <div class="lg:w-1/2 sm:w-1/3 w-full rounded-lg overflow-hidden mt-6 sm:mt-0">
+      <%-include('partials/weather')%>
+    </div>
+  </section>
+</section>
+</main>
+ <a href="/logout">Logout</a>
+<%- include('partials/footer') %>
+            <!-- <form action="/weather" method="POST" class="search">
           <div class="row">
             <div class="col-md-6">
               <div class="input-group mb-3">
@@ -48,58 +55,13 @@
                 <input placeholder="Submit" type="submit">
               </div>
             </div>
-            <div class="col-md-6">
-              <h4 id="displayCity"></h4>
-              <p id="timedisplay"></p>
-              <p class="weather-description"></p>
-            </div>
-          </div>
         </form>
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="display-temperature">
-              <div class="d-flex">
-                <img
-                  src=""
-                  alt="Clear"
-                  id="icon"
-                  class="float-left"
-                />
-                <div class="float-left">
-                  <span class="main-temp"></span
-                  ><span class="forc"
-                    ><a href="" class="fahrenheit">°F</a>|<a
-                      href=""
-                      class="celsius"
-                      >°C</a
-                    ></span
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <ul>
-              <li>Wind:<span class="wind"></span>mph</li>
-              <li>Humidity: <span class="humidity"></span>%</li>
-            </ul>
-          </div>
-        </div>
-        <div class="container weather" id="weather-cast">
-
-        </div>
-      </div>
-      
-    </section>
-  </div>
-</section>
-</main>
- <a href="/logout">Logout</a>
-<%- include('partials/footer') -%>
+ 
+ 
 
 
 
-<!-- 
+ 
 <section class="container-todos">
   <div class="row mt-5">
     <div class="col-6">

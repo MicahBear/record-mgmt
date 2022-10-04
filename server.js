@@ -14,6 +14,8 @@ const connectDB = require('./config/database');
 const mainRoute = require('./routes/main');
 // render-post-get authState and pages @contllers>authState
 const authRoutes = require('./routes/authRoutes');
+// render-post weather@routes-weather-weather.js
+const weatherRoute = require('./routes/weather');
 // passport config
 require("./config/passport")(passport);
 
@@ -47,6 +49,7 @@ app.use(flash());
 
 app.use('/', mainRoute);
 app.use('/state', authRoutes);
+app.use('/weather', weatherRoute);
 
 
 app.listen(process.env.PORT, () => {
