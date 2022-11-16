@@ -10,8 +10,8 @@ const methodOverride = require('method-override');
 const flash = require("express-flash");
 const morgan = require('morgan')
 const connectDB = require('./config/database');
-// render @index.ejs
-const mainRoute = require('./routes/main');
+// render @index.ejs - get
+const mainRoutes = require('./routes/main');
 // render-post-get authState and pages @contllers>authState
 const authRoutes = require('./routes/authRoutes');
 // render-post weather@routes-weather-weather.js
@@ -24,8 +24,10 @@ connectDB()
 app.set("view engine", "ejs");
 // app.use(cors())
 app.use(express.static('public'));
+//bodyparsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+//logging
 app.use(morgan('dev'));
 //Use forms for put / delete
 app.use(methodOverride("_method"));
@@ -49,7 +51,7 @@ app.use(flash());
 
 
 
-app.use('/', mainRoute);
+app.use('/', mainRoutes);
 app.use('/state', authRoutes);
 app.use('/weather', weatherRoute);
 
